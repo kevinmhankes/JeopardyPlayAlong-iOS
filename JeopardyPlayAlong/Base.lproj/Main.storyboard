@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Round Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JeopardyPlayAlong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstRoundController" customModule="JeopardyPlayAlong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,9 @@
                                         <state key="normal" title="Move on to Double Jeopardy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Mgh-t6-aeJ" kind="show" identifier="doubleJeopardy" id="5Vb-xx-rV2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -122,6 +125,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="132.26600985221674"/>
+        </scene>
+        <!--Double Jeopardy Controller-->
+        <scene sceneID="33o-hZ-6TO">
+            <objects>
+                <viewController id="Mgh-t6-aeJ" customClass="DoubleJeopardyController" customModule="JeopardyPlayAlong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ymm-u1-YOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wui-g3-sKM">
+                                <rect key="frame" x="16" y="64" width="382" height="798"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4u-Xg-x0z" userLabel="displayTotal">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="92.666666666666671"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-be-lAc" userLabel="Double Jeopardy">
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="382" height="93"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Double Jeopardy">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doubleJeopardyButton:" destination="Mgh-t6-aeJ" eventType="touchUpInside" id="vCb-Gt-kfx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-OG-Iq9" userLabel="Amount400">
+                                        <rect key="frame" x="0.0" y="201.66666666666669" width="382" height="92.666666666666686"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="400">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-FL-X0D" userLabel="Amount800">
+                                        <rect key="frame" x="0.0" y="302.33333333333331" width="382" height="92.666666666666686"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="800">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy6-uu-un6" userLabel="Amount1200">
+                                        <rect key="frame" x="0.0" y="403" width="382" height="92.666666666666686"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="600">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaz-K0-l1p" userLabel="Amount1600">
+                                        <rect key="frame" x="0.0" y="503.66666666666663" width="382" height="93"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="800">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhr-9k-rxr" userLabel="Amount2000">
+                                        <rect key="frame" x="0.0" y="604.66666666666663" width="382" height="92.666666666666629"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="1000">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-RA-Zxz">
+                                        <rect key="frame" x="0.0" y="705.33333333333337" width="382" height="92.666666666666629"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Move on to Final Jeopardy">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <viewLayoutGuide key="safeArea" id="bG3-DE-8vN"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wui-g3-sKM" firstAttribute="top" secondItem="qnq-Bv-eMr" secondAttribute="top" constant="20" id="0MK-LR-oGe"/>
+                            <constraint firstItem="wui-g3-sKM" firstAttribute="leading" secondItem="qnq-Bv-eMr" secondAttribute="leading" constant="16" id="16U-i7-1P1"/>
+                            <constraint firstItem="qnq-Bv-eMr" firstAttribute="bottom" secondItem="wui-g3-sKM" secondAttribute="bottom" id="Tsa-WJ-h0l"/>
+                            <constraint firstItem="qnq-Bv-eMr" firstAttribute="trailing" secondItem="wui-g3-sKM" secondAttribute="trailing" constant="16" id="vIa-aI-jCc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qnq-Bv-eMr"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="O4u-Xg-x0z" id="N5r-nH-UCK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZR-96-V0c" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="132"/>
         </scene>
     </scenes>
 </document>

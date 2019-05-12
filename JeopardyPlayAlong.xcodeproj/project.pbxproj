@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A09268B2288C5B8002444B9 /* JeopardyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09268A2288C5B8002444B9 /* JeopardyModel.swift */; };
+		0A09268D2288D276002444B9 /* DoubleJeopardyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09268C2288D276002444B9 /* DoubleJeopardyController.swift */; };
 		0A5A100D20916799000EC823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A100C20916799000EC823 /* AppDelegate.swift */; };
-		0A5A100F20916799000EC823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A100E20916799000EC823 /* ViewController.swift */; };
+		0A5A100F20916799000EC823 /* FirstRoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A100E20916799000EC823 /* FirstRoundController.swift */; };
 		0A5A101220916799000EC823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A101020916799000EC823 /* Main.storyboard */; };
 		0A5A10142091679B000EC823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A10132091679B000EC823 /* Assets.xcassets */; };
 		0A5A10172091679B000EC823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A10152091679B000EC823 /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A09268A2288C5B8002444B9 /* JeopardyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyModel.swift; sourceTree = "<group>"; };
+		0A09268C2288D276002444B9 /* DoubleJeopardyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleJeopardyController.swift; sourceTree = "<group>"; };
 		0A5A100920916799000EC823 /* JeopardyPlayAlong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardyPlayAlong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5A100C20916799000EC823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A5A100E20916799000EC823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A5A100E20916799000EC823 /* FirstRoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRoundController.swift; sourceTree = "<group>"; };
 		0A5A101120916799000EC823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A5A10132091679B000EC823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A5A10162091679B000EC823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				0A5A100C20916799000EC823 /* AppDelegate.swift */,
-				0A5A100E20916799000EC823 /* ViewController.swift */,
+				0A5A100E20916799000EC823 /* FirstRoundController.swift */,
+				0A09268C2288D276002444B9 /* DoubleJeopardyController.swift */,
+				0A09268A2288C5B8002444B9 /* JeopardyModel.swift */,
 				0A5A101020916799000EC823 /* Main.storyboard */,
 				0A5A10132091679B000EC823 /* Assets.xcassets */,
 				0A5A10152091679B000EC823 /* LaunchScreen.storyboard */,
@@ -193,16 +199,16 @@
 				TargetAttributes = {
 					0A5A100820916799000EC823 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					0A5A101C2091679B000EC823 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0A5A100820916799000EC823;
 					};
 					0A5A10272091679B000EC823 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0A5A100820916799000EC823;
 					};
 				};
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5A100F20916799000EC823 /* ViewController.swift in Sources */,
+				0A5A100F20916799000EC823 /* FirstRoundController.swift in Sources */,
+				0A09268B2288C5B8002444B9 /* JeopardyModel.swift in Sources */,
+				0A09268D2288D276002444B9 /* DoubleJeopardyController.swift in Sources */,
 				0A5A100D20916799000EC823 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -464,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -484,7 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlongTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JeopardyPlayAlong.app/JeopardyPlayAlong";
 			};
@@ -505,7 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlongTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JeopardyPlayAlong.app/JeopardyPlayAlong";
 			};
@@ -525,7 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlongUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = JeopardyPlayAlong;
 			};
@@ -545,7 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KevinHankes.JeopardyPlayAlongUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = JeopardyPlayAlong;
 			};

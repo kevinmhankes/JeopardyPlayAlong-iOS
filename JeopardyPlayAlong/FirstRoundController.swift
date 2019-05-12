@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstRoundController: UIViewController {
     
+    var amountModel = JeopardyModel(0)
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var amount200: UIButton!
     @IBOutlet weak var amount400: UIButton!
@@ -40,18 +41,18 @@ class ViewController: UIViewController {
     
     private var amountValue: Int {
         get {
-            // necesary check if inital label value is only one character
-            if amountLabel.text!.count > 1 {
-                let textWithoutDollarSign = String(amountLabel.text!.dropFirst())
-                print("\(textWithoutDollarSign)")
-                return Int(textWithoutDollarSign)!
-            } else {
-                return Int(amountLabel.text!)!
-            }
-            
+            return amountModel.amount
         }
         set {
             amountLabel.text = "$" + String(newValue)
+            amountModel.amount = newValue
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "doubleJeopardy") {
+            let doubleJeopardyController = segue.destination as! DoubleJeopardyController
+            doubleJeopardyController.amountModel = amountModel
         }
     }
     
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
         amountLabel.text = "0"
         let buttons: [UIButton?] = [amount200, amount400, amount600, amount800, amount1000]
         for button in buttons {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(_:)))
+            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(FirstRoundController.longPress(_:)))
             button?.addGestureRecognizer(longGesture)
         }
     }
